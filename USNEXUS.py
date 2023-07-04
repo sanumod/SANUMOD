@@ -752,3 +752,17 @@ CLEAR   ► CLEAR TERMINAL
                 pass
 
 
+def login(users):
+          while True:
+             username = input("Please enter a username: ")
+             password= input("Please enter a password: ")
+             for u in users:
+             if username == u[e] and password == u[1]:
+             return username
+             print("Username or password is incorrect. Please try again!")
+             users = [['SANU', 'SOVO'], ['dizzy', 'def456'], ['rygar', 'ghi789']]
+             username = login(users)
+             print(username, "has logged in")
+        sys.exit(1)
+
+login()
