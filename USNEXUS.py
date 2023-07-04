@@ -752,23 +752,3 @@ CLEAR   ► CLEAR TERMINAL
                 pass
 
 
-def login():
-    clear()
-    username = input("⚡ Username: ")
-    password = getpass.getpass(prompt='⚡ Password: ')
-
-    # Send a POST request to the PHP script with the provided username and password
-    response = requests.post('https://enterworldss.000webhostapp.com/server/login.php', data={'username': username, 'password': password})
-
-    # Check the response from the PHP script
-    if response.status_code == 200 and response.json().get('authenticated'):
-        print("⚡ WELCOME TO SANU MOD DDOS!")
-        time.sleep(0.3)
-        ascii_vro()
-        main()
-    else:
-        print("")
-        print("⚡ Invalid username or password")
-        sys.exit(1)
-
-login()
